@@ -1,0 +1,76 @@
+--------------------Begin definition------------------
+{
+  "dfa_name": "m3",
+  "final_states": [
+    "q1",
+    "q2",
+    "q3"
+  ],
+  "start_state": "q1",
+  "states": [
+    "q1",
+    "q2",
+    "q3",
+    "q4"
+  ],
+  "transition": [
+    {
+      "current_state": "q1",
+      "new_state": "q1",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q1",
+      "new_state": "q2",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q1",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q3",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q3",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q4",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q4",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q4",
+      "next_symbol": "1"
+    }
+  ]
+}
+--------------------End definition------------------
+0101
+ String: 0101 ----->   accepted 
+0111
+ String: 0111 ----->   accepted 
+00100
+ String: 00100 ----->   accepted 
+1011
+ String: 1011 ----->   accepted 
+1110
+ String: 1110-----> not accepted 
+11011
+ String: 11011-----> not accepted 
+110
+ String: 110-----> not accepted 
+010b1
+Invalid alphabet:b      ignore rest of string
+ String: 010b1-----> not accepted 

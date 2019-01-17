@@ -1,0 +1,73 @@
+--------------------Begin definition------------------
+{
+  "E": "all the alphabet",
+  "dfa_name": "m1",
+  "final_states": "q4",
+  "start_state": "q1",
+  "states": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5"
+  ],
+  "transition": [
+    {
+      "current_state": "q1",
+      "new_state": "q2",
+      "next_symbol": "a"
+    },
+    {
+      "current_state": "q1",
+      "new_state": "q5",
+      "next_symbol": "'E'-a"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q3",
+      "next_symbol": "."
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q2",
+      "next_symbol": "'E'-'.'"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q4",
+      "next_symbol": "c"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q5",
+      "next_symbol": "'E'-c"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q5",
+      "next_symbol": "'E'"
+    },
+    {
+      "current_state": "q5",
+      "new_state": "q5",
+      "next_symbol": "'E'"
+    }
+  ]
+}
+--------------------End definition------------------
+a.c
+String: a.c---->Accepted
+abb.c
+String: abb.c---->Accepted
+artybndsfg.c
+String: artybndsfg.c---->Accepted
+aaaaaaaaaaaaaa.c
+String: aaaaaaaaaaaaaa.c---->Accepted
+bbbbbb
+String: bbbbbb---->not accepted
+b.c
+String: b.c---->not accepted
+ba..c
+String: ba..c---->not accepted
+fda.c.c
+String: fda.c.c---->not accepted

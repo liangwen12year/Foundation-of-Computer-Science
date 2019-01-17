@@ -1,0 +1,83 @@
+--------------------Begin definition------------------
+{
+  "dfa_name": "m2",
+  "final_states": "q5",
+  "start_state": "q1",
+  "states": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5"
+  ],
+  "transition": [
+    {
+      "current_state": "q1",
+      "new_state": "q2",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q1",
+      "new_state": "q1",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q1",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q3",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q4",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q1",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q2",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q5",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q5",
+      "new_state": "q5",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q5",
+      "new_state": "q5",
+      "next_symbol": "1"
+    }
+  ]
+}
+--------------------End definition------------------
+10101
+ String: 10101 ----->   accepted 
+1101011
+ String: 1101011 ----->   accepted 
+0101
+ String: 0101 ----->   accepted 
+01010
+ String: 01010 ----->   accepted 
+11011
+ String: 11011-----> not accepted 
+10110
+ String: 10110-----> not accepted 
+110100
+ String: 110100-----> not accepted 
+11030
+   Invalid alphabet:3      igonre rest of string   11030
+ String: 11030-----> not accepted 

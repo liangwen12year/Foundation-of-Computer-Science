@@ -1,0 +1,108 @@
+--------------------Begin definition------------------
+{
+  "dfa_name": "m3",
+  "final_states": [
+    "q1",
+    "q2",
+    "q3"
+  ],
+  "start_state": "q1",
+  "states": [
+    "q1",
+    "q2",
+    "q3",
+    "q4"
+  ],
+  "transition": [
+    {
+      "current_state": "q1",
+      "new_state": "q1",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q1",
+      "new_state": "q2",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q1",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q3",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q3",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q4",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q4",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q4",
+      "next_symbol": "1"
+    }
+  ]
+}
+--------------------End definition------------------
+0101
+ Current State: q1 Symbol: 0 ---->New State: q1
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 0 ---->New State: q1
+ Current State: q1 Symbol: 1 ---->New State: q2
+ String: 0101 ----->   accepted 
+0111
+ Current State: q1 Symbol: 0 ---->New State: q1
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 1 ---->New State: q3
+ Current State: q3 Symbol: 1 ---->New State: q3
+ String: 0111 ----->   accepted 
+00100
+ Current State: q1 Symbol: 0 ---->New State: q1
+ Current State: q1 Symbol: 0 ---->New State: q1
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 0 ---->New State: q1
+ Current State: q1 Symbol: 0 ---->New State: q1
+ String: 00100 ----->   accepted 
+1011
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 0 ---->New State: q1
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 1 ---->New State: q3
+ String: 1011 ----->   accepted 
+1110
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 1 ---->New State: q3
+ Current State: q3 Symbol: 1 ---->New State: q3
+ Current State: q3 Symbol: 0 ---->New State: q4
+ String: 1110-----> not accepted 
+11011
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 1 ---->New State: q3
+ Current State: q3 Symbol: 0 ---->New State: q4
+ Current State: q4 Symbol: 1 ---->New State: q4
+ Current State: q4 Symbol: 1 ---->New State: q4
+ String: 11011-----> not accepted 
+110
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 1 ---->New State: q3
+ Current State: q3 Symbol: 0 ---->New State: q4
+ String: 110-----> not accepted 
+010b1
+ Current State: q1 Symbol: 0 ---->New State: q1
+ Current State: q1 Symbol: 1 ---->New State: q2
+ Current State: q2 Symbol: 0 ---->New State: q1
+Invalid alphabet:b      igonre rest of string     
+ String: 010b1-----> not accepted 

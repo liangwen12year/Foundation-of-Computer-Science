@@ -1,0 +1,75 @@
+--------------------Begin definition------------------
+{
+  "dfa_name": "m1",
+  "final_states": "q4",
+  "start_state": "q1",
+  "states": [
+    "q1",
+    "q2",
+    "q3",
+    "q4"
+  ],
+  "transition": [
+    {
+      "current_state": "q1",
+      "new_state": "q1",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q1",
+      "new_state": "q2",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q2",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q3",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q3",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q4",
+      "next_symbol": "1"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q4",
+      "next_symbol": "0"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q4",
+      "next_symbol": "1"
+    }
+  ]
+}
+--------------------End definition------------------
+010101
+ String: 010101 ----->   accepted 
+1111
+ String: 1111 ----->   accepted 
+11011
+ String: 11011 ----->   accepted 
+000111
+ String: 000111 ----->   accepted 
+001001
+ String: 001001-----> not accepted 
+11000
+ String: 11000-----> not accepted 
+10100
+ String: 10100-----> not accepted 
+10001
+ String: 10001-----> not accepted 
+1020
+   Invalid alphabet:2      igonre rest of string   1020
+ String: 1020-----> not accepted 
+

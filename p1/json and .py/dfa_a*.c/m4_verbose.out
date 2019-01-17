@@ -1,0 +1,130 @@
+--------------------Begin definition------------------
+{
+  "E": "all the alphabet",
+  "dfa_name": "m1",
+  "final_states": "q4",
+  "start_state": "q1",
+  "states": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5"
+  ],
+  "transition": [
+    {
+      "current_state": "q1",
+      "new_state": "q2",
+      "next_symbol": "a"
+    },
+    {
+      "current_state": "q1",
+      "new_state": "q5",
+      "next_symbol": "'E'-a"
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q3",
+      "next_symbol": "."
+    },
+    {
+      "current_state": "q2",
+      "new_state": "q2",
+      "next_symbol": "'E'-'.'"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q4",
+      "next_symbol": "c"
+    },
+    {
+      "current_state": "q3",
+      "new_state": "q5",
+      "next_symbol": "'E'-c"
+    },
+    {
+      "current_state": "q4",
+      "new_state": "q5",
+      "next_symbol": "'E'"
+    },
+    {
+      "current_state": "q5",
+      "new_state": "q5",
+      "next_symbol": "'E'"
+    }
+  ]
+}
+--------------------End definition------------------
+a.c
+ Current State: q1 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: . ---->New State: q3
+ Current State: q3 Symbol: c ---->New State: q4
+String: a.c---->Accepted
+abb.c
+ Current State: q1 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: b ---->New State: q2
+ Current State: q2 Symbol: b ---->New State: q2
+ Current State: q2 Symbol: . ---->New State: q3
+ Current State: q3 Symbol: c ---->New State: q4
+String: abb.c---->Accepted
+artybndsfg.c
+ Current State: q1 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: r ---->New State: q2
+ Current State: q2 Symbol: t ---->New State: q2
+ Current State: q2 Symbol: y ---->New State: q2
+ Current State: q2 Symbol: b ---->New State: q2
+ Current State: q2 Symbol: n ---->New State: q2
+ Current State: q2 Symbol: d ---->New State: q2
+ Current State: q2 Symbol: s ---->New State: q2
+ Current State: q2 Symbol: f ---->New State: q2
+ Current State: q2 Symbol: g ---->New State: q2
+ Current State: q2 Symbol: . ---->New State: q3
+ Current State: q3 Symbol: c ---->New State: q4
+String: artybndsfg.c---->Accepted
+aaaaaaaaaaaaaa.c
+ Current State: q1 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: a ---->New State: q2
+ Current State: q2 Symbol: . ---->New State: q3
+ Current State: q3 Symbol: c ---->New State: q4
+String: aaaaaaaaaaaaaa.c---->Accepted
+bbbbbb
+ Current State: q1 Symbol: b ---->New State: q5
+ Current State: q5 Symbol: b ---->New State: q5
+ Current State: q5 Symbol: b ---->New State: q5
+ Current State: q5 Symbol: b ---->New State: q5
+ Current State: q5 Symbol: b ---->New State: q5
+ Current State: q5 Symbol: b ---->New State: q5
+String: bbbbbb---->not accepted
+b.c
+ Current State: q1 Symbol: b ---->New State: q5
+ Current State: q5 Symbol: . ---->New State: q5
+ Current State: q5 Symbol: c ---->New State: q5
+String: b.c---->not accepted
+ba..c
+ Current State: q1 Symbol: b ---->New State: q5
+ Current State: q5 Symbol: a ---->New State: q5
+ Current State: q5 Symbol: . ---->New State: q5
+ Current State: q5 Symbol: . ---->New State: q5
+ Current State: q5 Symbol: c ---->New State: q5
+String: ba..c---->not accepted
+fda.c.c
+ Current State: q1 Symbol: f ---->New State: q5
+ Current State: q5 Symbol: d ---->New State: q5
+ Current State: q5 Symbol: a ---->New State: q5
+ Current State: q5 Symbol: . ---->New State: q5
+ Current State: q5 Symbol: c ---->New State: q5
+ Current State: q5 Symbol: . ---->New State: q5
+ Current State: q5 Symbol: c ---->New State: q5
+String: fda.c.c---->not accepted

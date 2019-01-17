@@ -1,0 +1,1 @@
+python3 dfa3.py [-h] -d m3.dfa -[v]
